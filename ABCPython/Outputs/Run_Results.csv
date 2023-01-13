@@ -1,0 +1,5 @@
+experimentID ;Number of Population; Maximum Evaluation; Limit; Function, Dimension, Upper Bound; Lower Bound; isMinimize; Result ; Time 
+2023-01-13123836-0 ;50; 500000; 1500; rastrigin; 30; 5.12; -5.12; True; 75.81054200943248 ; 18916.3359375 
+2023-01-13123836-1 ;50; 500000; 1500; rastrigin; 30; 5.12; -5.12; True; 57.849439698750274 ; 18885.544189453125 
+2023-01-13125710-0 ;50; 500000; 1500; rastrigin; 30; 5.12; -5.12; True; 0.0 ; 19237.526611328125 
+2023-01-13125710-1 ;50; 500000; 1500; rastrigin; 30; 5.12; -5.12; True; 0.0 ; 19287.91259765625 
