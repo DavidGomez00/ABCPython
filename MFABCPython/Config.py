@@ -11,17 +11,12 @@ class Config:
             _self.OBJECTIVE_FUNCTION = _self.objFunctionSelector.get(config['DEFAULT']['ObjectiveFunction'], "Error")
             _self.NUMBER_OF_POPULATION = int(config['DEFAULT']['NumberOfPopulation'])
             _self.MAXIMUM_EVALUATION = int(config['DEFAULT']['MaximumEvaluation'])
-            #_self.LIMIT = int(config['DEFAULT']['Limit'])
-            _self.BETA = float(config['DEFAULT']['Beta'])
-            _self.RLIMIT = int(config['DEFAULT']['Rlimit'])
-            _self.MI = float(config['DEFAULT']['Mi'])
-            _self.MIN_IMPROVEMENT = float(config['DEFAULT']['MinImprovement'])
+            _self.LIMIT = int(config['DEFAULT']['Limit'])
             _self.FOOD_NUMBER = int(_self.NUMBER_OF_POPULATION / 2)
             _self.DIMENSION = int(config['DEFAULT']['Dimension'])
             _self.UPPER_BOUND = float(config['DEFAULT']['UpperBound'])
             _self.LOWER_BOUND = float(config['DEFAULT']['LowerBound'])
             _self.MINIMIZE = bool(config['DEFAULT']['Minimize'])
-            _self.K = int(config['DEFAULT']['K'])
             _self.RUN_TIME = int(config['DEFAULT']['RunTime'])
             _self.SHOW_PROGRESS = bool(config['REPORT']['ShowProgress']=='True')
             _self.PRINT_PARAMETERS = bool(config['REPORT']['PrintParameters']=='True')
@@ -34,7 +29,6 @@ class Config:
             _self.OUTPUTS_FOLDER_NAME = str(config['REPORT']['OutputsFolderName'])
             _self.RANDOM_SEED = config['SEED']['RandomSeed'] == 'True'
             _self.SEED = int(config['SEED']['Seed'])
-            
             #####SETTINGS FILE######
 
             #####SETTINGS ARGUMENTS######

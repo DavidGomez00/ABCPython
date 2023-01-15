@@ -53,7 +53,7 @@ class Reporter:
                     _self.abcList[i].experimentID,
                     _self.abcList[i].conf.NUMBER_OF_POPULATION,
                     _self.abcList[i].conf.MAXIMUM_EVALUATION,
-                    _self.abcList[i].LIMIT,
+                    _self.abcList[i].conf.LIMIT,
                     _self.abcList[i].conf.OBJECTIVE_FUNCTION.__name__,
                     _self.abcList[i].conf.DIMENSION,
                     _self.abcList[i].conf.UPPER_BOUND,

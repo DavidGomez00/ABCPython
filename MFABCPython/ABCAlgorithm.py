@@ -21,8 +21,13 @@ def main(argv):
         abc.setExperimentID(run,expT)
         start_time = time.time() * 1000
         abc.initial()
+        abc.memorize_best_source()
         while(not(abc.stopping_condition())):
-            abc.start()
+            abc.send_employed_bees()
+            abc.calculate_probabilities()
+            abc.send_onlooker_bees()
+            abc.memorize_best_source()
+            abc.send_scout_bees()
             abc.increase_cycle()
 
         abc.globalTime = time.time() * 1000 - start_time
