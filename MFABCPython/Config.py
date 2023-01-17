@@ -16,6 +16,7 @@ class Config:
             _self.DIMENSION = int(config['DEFAULT']['Dimension'])
             _self.UPPER_BOUND = float(config['DEFAULT']['UpperBound'])
             _self.LOWER_BOUND = float(config['DEFAULT']['LowerBound'])
+            _self.UR = float(config['DEFAULT']['UpdateRatio'])
             _self.MINIMIZE = bool(config['DEFAULT']['Minimize'])
             _self.RUN_TIME = int(config['DEFAULT']['RunTime'])
             _self.SHOW_PROGRESS = bool(config['REPORT']['ShowProgress']=='True')

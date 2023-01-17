@@ -134,16 +134,6 @@ class ABC:
                     _self.foods[i][:] = np.copy(_self.solution) # sustitye la solución
                     _self.f[i] = _self.ObjValSol # valor de la función objetivo
                     _self.fitness[i] = _self.FitnessSol # Valor del fitness para esta solución
-
-                    '''
-                    # En caso de ser la mejor global, se actualiza
-                    if (_self.f[i] < _self.globalOpt and _self.conf.MINIMIZE == True) or (_self.f[i] >= _self.globalOpt and _self.conf.MINIMIZE == False):
-                        last_globalOpt = np.copy(_self.globalOpt)
-                        _self.globalOpt = np.copy(_self.f[i])
-                        _self.globalParams = np.copy(_self.foods[i][:])
-                        # Se calcula el grado de mejora de la solución global
-                        _self.globalOptDegree = 1 - (_self.globalOpt / last_globalOpt)
-                    '''
                     
                     # Se comprueba si el grado de mejora es suficiente para ignorar los intentos por rol
                     if ((_self.degrees[i] < _self.conf.MIN_IMPROVEMENT) and (_self.role_trial[i] > _self.conf.RLIMIT)):
@@ -211,15 +201,6 @@ class ABC:
                     _self.f[i] = _self.ObjValSol # valor de la función objetivo
                     _self.fitness[i] = _self.FitnessSol # Valor del fitness para esta solución
 
-                    '''
-                    # En caso de ser la mejor global, se actualiza
-                    if (_self.f[i] < _self.globalOpt and _self.conf.MINIMIZE == True) or (_self.f[i] >= _self.globalOpt and _self.conf.MINIMIZE == False):
-                        _self.globalOpt = np.copy(_self.f[i])
-                        _self.globalParams = np.copy(_self.foods[i][:])
-                        # Se calcula el grado de mejora de la solución global
-                        _self.globalOptDegree = 1 - (_self.globalOpt / last_globalOpt)
-                    '''
-
                     # Se comprueba si el grado de mejora es suficiente para ignorar los intentos por rol
                     if ((_self.degrees[i] < _self.conf.MIN_IMPROVEMENT) and (_self.role_trial[i] > _self.conf.RLIMIT)):
                         _self.trial[i] = 0
@@ -283,15 +264,6 @@ class ABC:
                     _self.degrees[i] = 1 - (_self.ObjValSol / _self.f[i])
                     # Se resetea el número de búsquedas fallidas
                     _self.trial[i] = 0
-
-                    '''
-                    # En caso de ser la mejor global, se actualiza
-                    if (_self.f[i] < _self.globalOpt and _self.conf.MINIMIZE == True) or (_self.f[i] >= _self.globalOpt and _self.conf.MINIMIZE == False):
-                        _self.globalOpt = np.copy(_self.f[i])
-                        _self.globalParams = np.copy(_self.foods[i][:])
-                        # Se calcula el grado de mejora de la solución global
-                        _self.globalOptDegree = 1 - (_self.globalOpt / last_globalOpt)
-                    '''
 
                     # Se comprueba si el grado de mejora es suficiente para ignorar los intentos por rol
                     if ((_self.degrees[i] < _self.conf.MIN_IMPROVEMENT) and (_self.role_trial[i] > _self.conf.RLIMIT)):

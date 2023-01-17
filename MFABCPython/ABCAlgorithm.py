@@ -1,7 +1,6 @@
 # github page: https://abcolony.github.io/
 # github repository: https://github.com/abcolony/ABCPython
 
-
 import datetime
 import sys
 import time
@@ -24,8 +23,9 @@ def main(argv):
         abc.memorize_best_source()
         while(not(abc.stopping_condition())):
             abc.send_employed_bees()
-            abc.calculate_probabilities()
+            abc.update_pf()
             abc.send_onlooker_bees()
+            abc.update_pf()
             abc.memorize_best_source()
             abc.send_scout_bees()
             abc.increase_cycle()
