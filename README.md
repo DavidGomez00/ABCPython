@@ -1,9 +1,11 @@
 # ABCPython
+Este repositorio ha sido creado a partir del código encontrado en https://github.com/abcolony/ABCPython, donde Omur ha implementado el algoritmo Artificial Bee Colony Optimization (ABC) en el leguaje Python. 
 
-https://abcolony.github.io
+En este repositorio se han realizado modificaciones al código original con la intención de mejorar su eficiencia y simplicidad. Además se han implementado a partir del código del algoritmo ABC dos variantes del algortimo presentadas en los trabajos de Y. Wang et al. y X. Song et al.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+# Artificial Bee Colony
+
+# Continuar README
 
 
 ## License
